@@ -78,7 +78,7 @@ __2) Добавьте обработчики которые будут посл�
 ```cs
 private readonly Guid processorId = Guid.NewGuid();
 ...
-buff.Add(processorId, new BuffProcessor<float>(originalValue => originalValue * 4f));
+buff.Add(processorId, new BuffProcessor<float>(value => value * 4f));
 ```
   
 __3) Вычислите значение бафа:__
@@ -89,7 +89,7 @@ Debug.Log(resultValue); // выводит 4
   
 __4) Замените обработчик:__
 ```cs
-buff.Replace(processorId, new BuffProcessor<float>(originalValue => originalValue + 20f));
+buff.Replace(processorId, new BuffProcessor<float>(value => value + 20f));
 
 resultValue = buff.Calculate();
 Debug.Log(resultValue); // выводит 21

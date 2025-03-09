@@ -27,8 +27,6 @@ A simple implementation of a buff-system for use in scripts. Its advantage is th
 
 In addition to the default processors for the buff values, you can create your own implementations.
 
-<br>
-
 ## Table of Contents
 - [Setup](#setup)
 - [Usage](#usage)

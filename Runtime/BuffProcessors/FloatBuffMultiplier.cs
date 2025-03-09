@@ -5,18 +5,7 @@ namespace Demegraunt.Framework {
     /// Float processor that multiplies the original value with the processor's value.
     /// </summary>
     public sealed class FloatBuffMultiplier : BuffProcessor<float> {
-        public Func<float> GetProcessorValue { get; set; }
-
-        public FloatBuffMultiplier(float multiplier) {
-            GetProcessorValue = () => multiplier;
-        }
-
-        public FloatBuffMultiplier(Func<float> getMultiplier) {
-            GetProcessorValue = getMultiplier;
-        }
-
-        public override float Process(float value) {
-            return value * GetProcessorValue.Invoke();
-        }
+        public FloatBuffMultiplier(float multiplier) : base(value => value * multiplier) { }
+        public FloatBuffMultiplier(Func<float> getMultiplier) : base(value => value * getMultiplier.Invoke()) { }
     }
 }

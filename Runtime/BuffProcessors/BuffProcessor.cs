@@ -1,16 +1,23 @@
-﻿namespace Demegraunt.Framework {
+﻿using System;
+
+namespace Demegraunt.Framework {
     /// <summary>
     /// Generic version of <see cref="BaseBuffProcessor"/>.<br/>
     /// You should inherit from this class when adding new buff processor types.
     /// </summary>
     /// <typeparam name="T">Buff processor value type.</typeparam>
-    public abstract class BuffProcessor<T> : BaseBuffProcessor {
-        protected BuffProcessor() : base(typeof(T)) { }
+    public class BuffProcessor<T> : BaseBuffProcessor {
+        /// <summary>
+        /// Logic of processing the original value.
+        /// </summary>
+        public Func<T, T> ProcessCallback { get; set; }
 
-        public override object ProcessObject(object value) {
-            return Process((T)value);
+        public BuffProcessor(Func<T, T> processCallback) : base(typeof(T)) {
+            ProcessCallback = processCallback;
         }
 
-        public abstract T Process(T value);
+        public override object ProcessObject(object value) {
+            return ProcessCallback.Invoke((T)value);
+        }
     }
 }

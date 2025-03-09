@@ -33,7 +33,8 @@ namespace Demegraunt.Framework {
         }
 
         /// <summary>
-        /// Base implementation to apply all processors to the original value and return result. 
+        /// Base implementation to apply all processors to the original value and return result.<br/><br/>
+        /// Processors are used in the order they were added. 
         /// </summary>
         /// <returns>Object that should be casted in order to use.</returns>
         public object CalculateObject() {

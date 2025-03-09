@@ -8,7 +8,7 @@
   "displayName": "Buffs",
   "description": "A simple and straightforward implementation of a buff system for Unity.",
   "unity": "2021.3",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/Demexis/Unity-Buffs.git"

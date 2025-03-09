@@ -6,10 +6,12 @@ namespace Demegraunt.Framework {
     /// </summary>
     /// <typeparam name="T">The type of buff value.</typeparam>
     public class Buff<T> : BaseBuff {
+        public Buff(T originalValue) : base(typeof(T), () => originalValue) { }
         public Buff(Func<T> getOriginalValue) : base(typeof(T), () => getOriginalValue.Invoke()) { }
 
         /// <summary>
-        /// Apply all processors to the original value and return result. 
+        /// Apply all processors to the original value and return result.<br/><br/>
+        /// Processors are used in the order they were added. 
         /// </summary>
         /// <returns>Result value.</returns>
         public T Calculate() {

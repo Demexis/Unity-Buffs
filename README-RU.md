@@ -182,7 +182,7 @@ public sealed class WalkRunBuffs : MonoBehaviour {
 * Если вы закешируете созданный экземпляр обработчика, сможете обратиться к свойству `ProcessCallback` для изменения логики обработки, не прибегая к созданию совершенно нового экземпляра:
 ```cs
 var buff = new Buff<float>(1f);
-var processor = new BuffProcessor(value => value + 5f);
+var processor = new BuffProcessor<float>(value => value + 5f);
 
 buff.Add(Guid.NewGuid(), processor);
 Debug.Log(buff.Calculate()); // выводит 6

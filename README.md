@@ -183,7 +183,7 @@ public sealed class WalkRunBuffs : MonoBehaviour {
 * If you cache the created processor instance, you can access the `ProcessCallback` property to change the processing logic, instead of creating a completely new instance:
 ```cs
 var buff = new Buff<float>(1f);
-var processor = new BuffProcessor(value => value + 5f);
+var processor = new BuffProcessor<float>(value => value + 5f);
 
 buff.Add(Guid.NewGuid(), processor);
 Debug.Log(buff.Calculate()); // prints 6

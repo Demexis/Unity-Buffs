@@ -192,3 +192,4 @@ processor.ProcessCallback = value => value / 2f;
 Debug.Log(buff.Calculate()); // prints 0.5
 ```
 
+* If you don't want to write separately a field with a parameter (`float`, `int`, ...) and a field with a buff, you can use the types: `FloatBuffField`, `IntBuffField`. You can also make an implementation for a new type by inheriting from `BuffField<T>` and adding the `[Serializable]` attribute.

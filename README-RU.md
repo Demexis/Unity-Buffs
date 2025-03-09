@@ -166,7 +166,7 @@ public sealed class WalkRunBuffs : MonoBehaviour {
     }
 
     private void Update() {
-        // always running
+        // всегда бежит
         transform.position += Vector3.right * (Time.deltaTime * RunBuff.Calculate());
     }
 

@@ -79,7 +79,7 @@ __2) Add processor(-s) that will sequentially transform the original value:__
 ```cs
 private readonly Guid processorId = Guid.NewGuid();
 ...
-buff.Add(processorId, new BuffProcessor<float>(originalValue => originalValue * 4f));
+buff.Add(processorId, new BuffProcessor<float>(value => value * 4f));
 ```
   
 __3) Calculate the buff value:__
@@ -90,7 +90,7 @@ Debug.Log(resultValue); // prints 4
   
 __4) Replace the processor:__
 ```cs
-buff.Replace(processorId, new BuffProcessor<float>(originalValue => originalValue + 20f));
+buff.Replace(processorId, new BuffProcessor<float>(value => value + 20f));
 
 resultValue = buff.Calculate();
 Debug.Log(resultValue); // prints 21

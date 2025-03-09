@@ -190,3 +190,5 @@ Debug.Log(buff.Calculate()); // выводит 6
 processor.ProcessCallback = value => value / 2f;
 Debug.Log(buff.Calculate()); // выводит 0.5
 ```
+
+* Чтобы не писать отдельно поле с параметром (`float`, `int`, ...) и поле с бафом, можно воспользоваться типами:  `FloatBuffField`, `IntBuffField`. Можно также сделать реализацию для нового типа, отнаследовавшись от `BuffField<T>` и добавив аттрибут `[Serializable]`.

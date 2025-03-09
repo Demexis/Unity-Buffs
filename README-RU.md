@@ -129,7 +129,7 @@ public sealed class MovementWithBuff : MonoBehaviour {
             DeactivateSprint();
         }
 
-        transform.position += Vector3.right * Time.deltaTime * SpeedBuff.Calculate();
+        transform.position += Vector3.right * (Time.deltaTime * SpeedBuff.Calculate());
     }
 
     public void ActivateSprint() {
@@ -167,7 +167,7 @@ public sealed class WalkRunBuffs : MonoBehaviour {
 
     private void Update() {
         // always running
-        transform.position += Vector3.right * Time.deltaTime * RunBuff.Calculate();
+        transform.position += Vector3.right * (Time.deltaTime * RunBuff.Calculate());
     }
 
     public void Slowdown() {

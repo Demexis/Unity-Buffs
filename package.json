@@ -1,0 +1,21 @@
+{
+  "name": "com.demegraunt.buffs",
+  "author":
+  {
+    "name": "Devid Sorochinsky",
+    "url": "https://github.com/Demexis"
+  },
+  "displayName": "Buffs",
+  "description": "A simple and straightforward implementation of a buff system for Unity.",
+  "unity": "2021.3",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Demexis/Unity-Buffs.git"
+  },
+  "keywords":
+  [
+    "buff",
+    "buffs"
+  ]
+}

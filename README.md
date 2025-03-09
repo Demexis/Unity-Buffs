@@ -23,7 +23,7 @@
   </tr>
 </table>
 
-A simple implementation of a buff system for use in scripts.
+A simple implementation of a buff-system for use in scripts.
 
 In addition to the default processors for the buff values, you can create your own implementations.
 

@@ -36,7 +36,7 @@ namespace Demegraunt.Framework {
         /// Base implementation to apply all processors to the original value and return result. 
         /// </summary>
         /// <returns>Object that should be casted in order to use.</returns>
-        public object GetProcessedValueObject() {
+        public object CalculateObject() {
             var originalValue = getOriginalValue.Invoke();
             
             foreach (var (_, buff) in buffProcessors) {

@@ -12,8 +12,8 @@ namespace Demegraunt.Framework {
         /// Apply all processors to the original value and return result. 
         /// </summary>
         /// <returns>Result value.</returns>
-        public T GetProcessedValue() {
-            return (T)GetProcessedValueObject();
+        public T Calculate() {
+            return (T)CalculateObject();
         }
 
         /// <summary>

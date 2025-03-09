@@ -35,7 +35,7 @@ namespace Demegraunt.Framework {
         /// </summary>
         /// <returns>Result value.</returns>
         public T Calculate() {
-            return Buff.GetProcessedValue();
+            return Buff.Calculate();
         }
     }
 }

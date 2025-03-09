@@ -23,7 +23,7 @@
   </tr>
 </table>
 
-A simple implementation of a buff-system for use in scripts.
+A simple implementation of a buff-system for use in scripts. Its advantage is that you can use any C#-types as the buff value and value-processors.
 
 In addition to the default processors for the buff values, you can create your own implementations.
 

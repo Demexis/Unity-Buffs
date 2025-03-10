@@ -17,6 +17,38 @@ namespace Demegraunt.Framework {
         public T Calculate() {
             return (T)CalculateObject();
         }
+        
+        /// <summary>
+        /// Try add new value processor.<br/><br/>
+        /// Will return false if already contains a processor with the same ID.
+        /// </summary>
+        /// <param name="processorId">Unique GUID. You can use <see cref="Guid.NewGuid()"/>.</param>
+        /// <param name="processCallback">Buff value processing callback.</param>
+        /// <returns>true if the processor was registered successfully; otherwise, false.</returns>
+        public bool TryAdd(Guid processorId, Func<T, T> processCallback) {
+            return TryAdd(processorId, new BuffProcessor<T>(processCallback));
+        }
+
+        /// <summary>
+        /// Try add new value processor.<br/><br/>
+        /// Will return false if already contains a processor with the same ID.
+        /// </summary>
+        /// <param name="processorId">Unique GUID. You can use <see cref="Guid.NewGuid()"/>.</param>
+        /// <param name="buffProcessor">Buff processor implementation.</param>
+        /// <returns>true if the processor was registered successfully; otherwise, false.</returns>
+        public bool TryAdd(Guid processorId, BuffProcessor<T> buffProcessor) {
+            return TryAddBase(processorId, buffProcessor);
+        }
+
+        /// <summary>
+        /// Register new value processor.<br/>
+        /// You can't add the same processor ID twice. Generate new GUID or replace old processor by using <see cref="ReplaceBaseProcessor"/>.
+        /// </summary>
+        /// <param name="processorId">Unique GUID. You can use <see cref="Guid.NewGuid()"/>.</param>
+        /// <param name="processCallback">Buff value processing callback.</param>
+        public void Add(Guid processorId, Func<T, T> processCallback) {
+            Add(processorId, new BuffProcessor<T>(processCallback));
+        }
 
         /// <summary>
         /// Register new value processor.<br/>

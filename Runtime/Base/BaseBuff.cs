@@ -48,6 +48,21 @@ namespace Demegraunt.Framework {
         }
 
         /// <summary>
+        /// Base implementation to try registering new value processor.<br/><br/>
+        /// Will return false if already contains a processor with the same ID.
+        /// </summary>
+        /// <param name="processorId">Unique GUID. You can use <see cref="Guid.NewGuid()"/>.</param>
+        /// <param name="buffProcessor">Buff processor implementation.</param>
+        public bool TryAddBase(Guid processorId, BaseBuffProcessor buffProcessor) {
+            if (Contains(processorId)) {
+                return false;
+            }
+            
+            AddBase(processorId, buffProcessor);
+            return true;
+        }
+
+        /// <summary>
         /// Base implementation to register new value processor.<br/>
         /// Logs an error if the types are mismatched.<br/>
         /// You can't add the same processor ID twice. Generate new GUID or replace old processor by using <see cref="ReplaceBase"/>.

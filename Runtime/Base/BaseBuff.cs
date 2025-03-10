@@ -53,6 +53,7 @@ namespace Demegraunt.Framework {
         /// </summary>
         /// <param name="processorId">Unique GUID. You can use <see cref="Guid.NewGuid()"/>.</param>
         /// <param name="buffProcessor">Buff processor implementation.</param>
+		/// <returns>true if the processor was registered successfully; otherwise, false.</returns>
         public bool TryAddBase(Guid processorId, BaseBuffProcessor buffProcessor) {
             if (Contains(processorId)) {
                 return false;

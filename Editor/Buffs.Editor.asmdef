@@ -1,0 +1,10 @@
+{
+	"name": "Buffs.Editor",
+	"rootNamespace": "Demegraunt.Framework",
+	"references": [
+		"Buffs"
+	],
+	"includePlatforms": [
+		"Editor"
+	]
+}

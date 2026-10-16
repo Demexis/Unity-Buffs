@@ -8,7 +8,11 @@
   "displayName": "Buffs",
   "description": "A simple and straightforward implementation of a buff system for Unity.",
   "unity": "2021.3",
-  "version": "1.2.0",
+  "version": "2.0.0",
+  "license": "MIT",
+  "documentationUrl": "https://github.com/Demexis/Unity-Buffs#readme",
+  "changelogUrl": "https://github.com/Demexis/Unity-Buffs/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/Demexis/Unity-Buffs/blob/main/LICENSE.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/Demexis/Unity-Buffs.git"
@@ -16,6 +20,8 @@
   "keywords":
   [
     "buff",
-    "buffs"
+    "buffs",
+    "modifier",
+    "stats"
   ]
 }

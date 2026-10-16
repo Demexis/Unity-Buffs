@@ -1,3 +1,4 @@
 {
-	"name": "Buffs"
+	"name": "Buffs",
+	"rootNamespace": "Demegraunt.Framework"
 }
